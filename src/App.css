@@ -1,0 +1,158 @@
+.app,
+.home {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app {
+  padding: 12px 16px 24px;
+  gap: 8px;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.home-link {
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--text);
+  background: none;
+  border: none;
+  padding: 6px 8px;
+  cursor: pointer;
+}
+
+.slogan {
+  color: var(--text);
+  margin-top: 4px;
+}
+
+.stage {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--text);
+}
+
+.board-area {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  display: flex;
+}
+
+.board-viewport {
+  /* No explicit height: percentage heights need a definite ancestor height, and
+     .board-area's own height comes from flex-grow, not a set `height`. Relying on
+     flex's default cross-axis stretch instead sizes this correctly. */
+  flex: 1;
+  align-self: stretch;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.board-square {
+  position: relative;
+}
+
+.app-footer {
+  min-height: 88px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.result button {
+  margin-top: 8px;
+  font-family: var(--sans);
+  font-size: 16px;
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.result.correct button {
+  color: #1b7a3f;
+  background: rgba(46, 204, 113, 0.15);
+}
+
+.result.wrong button {
+  color: #b23327;
+  background: rgba(231, 76, 60, 0.15);
+}
+
+.debug {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text);
+  opacity: 0.6;
+}
+
+/* Home / Records screens */
+
+.home {
+  justify-content: center;
+  gap: 28px;
+  padding: 24px;
+  text-align: center;
+}
+
+.home h1 {
+  margin: 0;
+}
+
+.home-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 220px;
+}
+
+.menu-btn {
+  font-family: var(--sans);
+  font-size: 17px;
+  padding: 14px;
+  border-radius: 12px;
+  border: 2px solid var(--border);
+  background: var(--code-bg);
+  color: var(--text-h);
+  cursor: pointer;
+}
+
+.menu-btn.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+.records-card {
+  padding: 20px 36px;
+  border-radius: 12px;
+  background: var(--code-bg);
+}
+
+.records-label {
+  font-size: 14px;
+  color: var(--text);
+  margin: 0;
+}
+
+.records-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-h);
+  margin: 4px 0 0;
+}
