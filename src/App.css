@@ -61,8 +61,14 @@
   justify-content: center;
 }
 
-.board-square {
-  position: relative;
+.board-grid {
+  display: grid;
+}
+
+.board-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .app-footer {

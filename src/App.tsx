@@ -83,11 +83,7 @@ function App() {
             <button onClick={nextRound}>다시하기</button>
           </div>
         )}
-        {lastMeta && (
-          <p className="debug">
-            actual ΔE {lastMeta.actualDeltaE.toFixed(2)} · neighbor dist {lastMeta.answerNeighborDist.toFixed(0)}px
-          </p>
-        )}
+        {lastMeta && <p className="debug">actual ΔE {lastMeta.actualDeltaE.toFixed(2)}</p>}
       </footer>
     </div>
   )
